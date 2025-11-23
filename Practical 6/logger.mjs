@@ -9,13 +9,13 @@ async function setup() {
         await mkdir('logs', { recursive: true });
 
         // Generate a small sample CSV for demonstration with Indian names
-        const indianNames = [
+        const names = [
             'Priya Sharma', 'Rohan Gupta', 'Anjali Singh', 'Vikram Kumar', 'Sneha Patel',
             'Arjun Reddy', 'Meera Desai', 'Aditya Joshi', 'Pooja Mehta', 'Sameer Khan',
             'Kavita Rao', 'Rajesh Nair', 'Sunita Murthy', 'Deepak Iyer', 'Lakshmi Pillai'
         ];
         const csvContent = Array.from({ length: 5000 }, (_, i) => {
-            const name = indianNames[i % indianNames.length];
+            const name = names[i % names.length];
             const emailName = name.toLowerCase().replace(' ', '.');
             const domain = ['example.com', 'test.org', 'sample.net', 'demo.co.uk', 'mail.io'][i % 5];
             return `${i + 1},${name},${emailName}.${i}@${domain}`;

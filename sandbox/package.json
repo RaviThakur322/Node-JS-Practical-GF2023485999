@@ -1,0 +1,5 @@
+{
+  "name": "sandbox-project",
+  "version": "1.0.0",
+  "description": "An isolated environment for programmatic npm install."
+}
